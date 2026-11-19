@@ -8,8 +8,8 @@ alias v='vim'
 
 # Dotfiles are ordinary Pacman packages; no checkout or subtree aliases required.
 alias dotfiles='cd "${XDG_DATA_HOME:-$HOME/.local/share}/arch-dotfiles/config"'
-alias cfg-update='adot update'
-alias cfg-links='arch-dotfiles-config activate'
+alias cfg-update='aco update'
+alias cfg-links='aco-arch-dotfiles-config activate'
 
 # Wallpaper Switcher (Default + per-monitor overrides)
 alias wp='wallpaper'
