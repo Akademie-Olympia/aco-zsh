@@ -5,8 +5,8 @@ Edit this repository and push to `main`. The central registry checks main branch
 every five minutes and publishes automatically versioned, signed packages after
 a successful build. GitHub may delay scheduled runs.
 
-Installation: https://github.com/MichaelWeissDEV/dotfiles#installation
+Installation: https://github.com/Akademie-Olympia/aco-dotfiles#installation
 
 With sibling checkouts, build using:
 `bash ../dotfiles/packaging/arch/build.sh arch-dotfiles-zsh`.
-To request an immediate registry build: `gh workflow run packages.yml -R MichaelWeissDEV/dotfiles`.
+To request an immediate registry build: `gh workflow run packages.yml -R Akademie-Olympia/aco-dotfiles`.

@@ -4,7 +4,7 @@ pkgver=0.3.0
 pkgrel=1
 pkgdesc='Zsh configuration, theme and shell helpers'
 arch=('any')
-url='https://github.com/MichaelWeissDEV/dotfiles'
+url='https://github.com/Akademie-Olympia/aco-dotfiles'
 license=('LicenseRef-arch-dotfiles-bundle')
 depends=('arch-dotfiles-core>=0.3.0' 'zsh' 'arch-dotfiles-oh-my-zsh' 'zsh-autosuggestions' 'zsh-syntax-highlighting' 'fzf' 'zoxide')
 optdepends=()
