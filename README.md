@@ -1,28 +1,26 @@
 # Zsh configuration
 
-Oh My Zsh, Autosuggestions, Syntax-Highlighting, FZF, zoxide und Shell-Helfer.
+Oh My Zsh, autosuggestions, syntax highlighting, fzf, zoxide and shell helpers.
 
-**[Vollständige Dokumentation](https://aco-zsh.readthedocs.io/en/latest/)** ·
-[Komponenten](https://aco-arch-dotfiles.readthedocs.io/en/latest/components/#zsh) ·
-[Installation und Updates](https://aco-arch-dotfiles.readthedocs.io/en/latest/arch-package/)
+**[Full documentation](https://aco-zsh.readthedocs.io/en/latest/)** ·
+[Design & dependencies](https://aco-zsh.readthedocs.io/en/latest/design/) ·
+[Installation and updates](https://aco-arch-dotfiles.readthedocs.io/en/latest/arch-package/)
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Akademie-Olympia/aco-arch-dotfiles/main/install.sh | bash -s -- zsh
 ```
 
-Paket: `aco-arch-dotfiles-zsh`. Dateien: `~/.config/zsh/zshrc`, `aliases.zsh` und `themes/`.
-`~/.zshrc` wird bei der Aktivierung gesichert und verlinkt. Login-Shell und
-Systemdienste werden nicht automatisch geändert. Alle Aliase stehen im Handbuch.
+Package: `aco-arch-dotfiles-zsh`. Files: `~/.config/zsh/zshrc`, `aliases.zsh` and `themes/`.
+`~/.zshrc` is backed up and linked on activation. The login shell and system services are never changed automatically. All aliases are in the manual.
+Develop independently in this repository and push to `main`; after a successful registry build update with `sudo pacman -Syu`. Local builds: [PACKAGING.md](PACKAGING.md).
 
-Hier unabhängig auf `main` pushen; nach erfolgreichem Registry-Build mit
-`sudo pacman -Syu` aktualisieren. [PACKAGING.md](PACKAGING.md).
+### Customisation
 
-### Anpassung
+The entry point is `~/.config/zsh/zshrc`; aliases live in `aliases.zsh`. Test changes in a new shell. The login shell is not switched automatically; the shell guide explains the available helpers.
 
-Einstieg ist `~/.config/zsh/zshrc`; Aliase stehen in `aliases.zsh`. Änderungen in einer neuen Shell testen. Die Login-Shell wird nicht automatisch umgestellt; die Shell-Anleitung erklärt die vorhandenen Helfer.
-
-Eigene Änderungen in der aktivierten Benutzerkopie bleiben bei der Synchronisierung erhalten; neue abweichende Vorgaben erscheinen als `.pacnew`. Siehe [Update und Wiederherstellung](https://aco-arch-dotfiles.readthedocs.io/en/latest/verification/).
+Your own changes in the activated user copy survive synchronisation; new differing defaults appear as `.pacnew`.
+See [update and recovery](https://aco-arch-dotfiles.readthedocs.io/en/latest/verification/).
 
 [![Package safety](https://github.com/Akademie-Olympia/aco-zsh/actions/workflows/package.yml/badge.svg)](https://github.com/Akademie-Olympia/aco-zsh/actions/workflows/package.yml)
 
-[MIT-Lizenz](LICENSE).
+[MIT licence](LICENSE).

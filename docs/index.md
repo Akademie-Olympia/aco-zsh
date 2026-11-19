@@ -1,7 +1,7 @@
 # Zsh
 
 ::::{div} aco-hero
-**Oh My Zsh, Autosuggestions, Syntax-Highlighting, FZF, zoxide und Shell-Helfer.**
+**Oh My Zsh, autosuggestions, syntax highlighting, fzf, zoxide and shell helpers.**
 
 
 ::::
@@ -9,39 +9,39 @@
 ::::{grid} 1 2 2 3
 :gutter: 3
 
-:::{grid-item-card} Aufbau & Abhängigkeiten
+:::{grid-item-card} Design & dependencies
 :link: design
 :link-type: doc
 
-Warum so gebaut, benötigte Pakete, Bibliotheken und Versionen.
+Why it is built this way, required packages, libraries and versions.
 :::
 
-:::{grid-item-card} Anleitung
+:::{grid-item-card} Guide
 :link: guide
 :link-type: doc
 
-Prompt, Plugins, Befehle, Aliase und Funktionen.
+Prompt, plugins, commands, aliases and functions.
 :::
 
 :::{grid-item-card} Installation
 :link: installation
 :link-type: doc
 
-Installieren, aktualisieren, entfernen.
+Install, update, remove.
 :::
 
-:::{grid-item-card} Konfiguration
+:::{grid-item-card} Configuration
 :link: configuration
 :link-type: doc
 
-`zshrc` und `aliases.zsh`.
+`zshrc` and `aliases.zsh`.
 :::
 
 :::{grid-item-card} Terminals
 :link: https://aco-kitty.readthedocs.io/en/latest/
 :link-type: url
 
-Kitty, Ghostty und Foot nutzen diese Shell.
+Kitty, Ghostty and Foot use this shell.
 :::
 
 ::::

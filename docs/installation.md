@@ -1,6 +1,6 @@
 # Installation
 
-## Installieren
+## Install
 
 ::::{tab-set}
 :::{tab-item} Installer
@@ -9,7 +9,7 @@ curl -fsSL https://raw.githubusercontent.com/Akademie-Olympia/aco-arch-dotfiles/
 ```
 :::
 :::{tab-item} pacman
-Wenn das Repository schon eingerichtet ist (`aco-arch-dotfiles` Installer):
+If the repository is already set up (installer of `aco-arch-dotfiles`):
 
 ```bash
 sudo pacman -S aco-arch-dotfiles-zsh
@@ -18,36 +18,34 @@ aco install zsh
 :::
 ::::
 
-Der Installer prüft den Signierschlüssel, richtet das Pacman-Repository ein,
-installiert `aco-arch-dotfiles-zsh` samt Abhängigkeiten und aktiviert die Konfiguration. Bestehende
-Dateien werden vorher gesichert.
+The installer verifies the signing key, sets up the pacman repository, installs `aco-arch-dotfiles-zsh` with its dependencies and activates the
+configuration. Existing files are backed up first.
 
-## Aktualisieren
+## Update
 
 ```bash
-sudo pacman -Syu        # oder: aco update
+sudo pacman -Syu        # or: aco update
 ```
 
-Neue Vorgaben werden mit deinen eigenen Änderungen zusammengeführt. Wo beides
-abweicht, legt `aco` eine `.pacnew`-Datei neben deine Datei. Nach Änderungen die
-Anwendung neu starten. Neue Shell starten oder `exec zsh`.
+New defaults are merged with your own changes. Where they differ, `aco` places a `.pacnew` file next to yours. After changes restart the
+application: open a new shell or run `exec zsh`.
 
-## Entfernen
+## Remove
 
 ```bash
-aco deactivate zsh                 # stellt die gesicherten Einstellungen wieder her
+aco deactivate zsh                 # restores the backed-up settings
 sudo pacman -Rns aco-arch-dotfiles-zsh
 ```
 
-`pacman` löscht niemals dein Home-Verzeichnis, Backups oder eigene Änderungen.
+`pacman` never deletes your home directory, backups or your own changes.
 
-## Wo liegt was?
+## Where things live
 
-| Ort | Inhalt |
+| Location | Content |
 | --- | --- |
-| `/usr/share/arch-dotfiles/zsh/` | Vorgaben des Pakets (von pacman verwaltet) |
-| `~/.local/share/arch-dotfiles/config/zsh/` | Deine bearbeitbare Kopie – hier änderst du |
-| `~/.zshrc` → `zsh/zshrc`; `~/.config/zsh` | Verknüpfung auf deine Kopie |
+| `/usr/share/arch-dotfiles/zsh/` | Package defaults (managed by pacman) |
+| `~/.local/share/arch-dotfiles/config/zsh/` | Your editable copy – change things here |
+| `~/.zshrc` → `zsh/zshrc`; `~/.config/zsh` | Link to your copy |
 
-`aco path` zeigt das Verzeichnis deiner Kopien. Quellen und Paketrezept:
+`aco path` prints the directory of your copies. Sources and package recipe:
 [`packaging/arch/PKGBUILD`](https://github.com/Akademie-Olympia/aco-zsh/blob/main/packaging/arch/PKGBUILD).

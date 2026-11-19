@@ -16,25 +16,30 @@ from sphinx.highlighting import lexers
 KIT = pathlib.Path(__file__).resolve().parent
 ORG = "Akademie-Olympia"
 
-# (slug, short title, one line) – the ecosystem shown in every sidebar.
+RTD = "https://{}.readthedocs.io/en/latest/"
+DOCS = "aco-docs"  # one Read the Docs project for all small components
+
+# (key, short title, one line, URL, page prefix) – the ecosystem shown in every sidebar.
+# Components with their own site use RTD.format(key). Small components live in the shared
+# aco-docs project; their prefix highlights the entry while one of their pages is open.
 PROJECTS = [
-    ("aco-arch-dotfiles", "Hub & Installer", "Installation, Pakete, Desktop, Cheatsheet"),
-    ("aco-hypr", "Hyprland", "Fensterverwaltung, Sperrbildschirm, Screenshots"),
-    ("aco-waybar", "Waybar", "Statusleiste und Powermenü"),
-    ("aco-nvim", "Neovim", "Editor mit Plugins, LSP, Debugger"),
-    ("aco-vim", "Vim", "Schlanke Vim-Konfiguration"),
-    ("aco-tmux", "tmux", "Terminal-Multiplexer"),
-    ("aco-zsh", "Zsh", "Shell, Aliase, Prompt"),
-    ("aco-kitty", "Kitty", "Terminal"),
-    ("aco-ghostty", "Ghostty", "Terminal"),
-    ("aco-foot", "Foot", "Terminal"),
-    ("aco-yazi", "Yazi", "Dateimanager im Terminal"),
-    ("aco-fuzzel", "Fuzzel", "Anwendungsstarter"),
-    ("aco-pcmanfm", "PCManFM", "Grafischer Dateimanager"),
-    ("aco-libfm", "libfm", "Dateimanager-Bibliothek"),
-    ("aco-gtk3", "GTK 3", "Theme und Einstellungen"),
-    ("aco-gtk4", "GTK 4", "Theme und Einstellungen"),
-    ("aco-wallpaper", "Wallpaper", "Hintergrundbilder"),
+    ("aco-arch-dotfiles", "Hub & Installer", "Installation, packages, desktop, cheatsheet", RTD.format("aco-arch-dotfiles"), ""),
+    ("aco-hypr", "Hyprland", "Window management, lock screen, screenshots, monitors", RTD.format("aco-hypr"), ""),
+    ("aco-nvim", "Neovim", "Editor with plugins, LSP and debugger", RTD.format("aco-nvim"), ""),
+    ("aco-vim", "Vim", "Lean Vim configuration", RTD.format("aco-vim"), ""),
+    ("aco-tmux", "tmux", "Terminal multiplexer", RTD.format("aco-tmux"), ""),
+    ("aco-zsh", "Zsh", "Shell, aliases, prompt", RTD.format("aco-zsh"), ""),
+    ("aco-kitty", "Kitty", "Terminal", RTD.format("aco-kitty"), ""),
+    ("aco-ghostty", "Ghostty", "Terminal", RTD.format("aco-ghostty"), ""),
+    ("aco-docs", "Waybar", "Status bar and power menu", RTD.format(DOCS) + "waybar/", "waybar"),
+    ("aco-docs", "Wallpaper", "Wallpaper switcher", RTD.format(DOCS) + "wallpaper/", "wallpaper"),
+    ("aco-docs", "Fuzzel", "Launcher and shared menu", RTD.format(DOCS) + "fuzzel/", "fuzzel"),
+    ("aco-docs", "Foot", "Lightweight terminal", RTD.format(DOCS) + "foot/", "foot"),
+    ("aco-docs", "Yazi", "Terminal file manager", RTD.format(DOCS) + "yazi/", "yazi"),
+    ("aco-docs", "PCManFM", "Graphical file manager", RTD.format(DOCS) + "pcmanfm/", "pcmanfm"),
+    ("aco-docs", "libfm", "File manager library settings", RTD.format(DOCS) + "libfm/", "libfm"),
+    ("aco-docs", "GTK 3", "Theme and settings", RTD.format(DOCS) + "gtk3/", "gtk3"),
+    ("aco-docs", "GTK 4", "Theme and settings", RTD.format(DOCS) + "gtk4/", "gtk4"),
 ]
 
 

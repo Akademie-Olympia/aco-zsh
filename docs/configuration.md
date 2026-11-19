@@ -1,6 +1,6 @@
-# Konfiguration
+# Configuration
 
-Die Vorgaben dieses Pakets – so wie sie ausgeliefert werden. Deine bearbeitbare Kopie liegt unter `~/.local/share/arch-dotfiles/config/zsh/`.
+The defaults of this package as shipped. Your editable copy lives in `~/.local/share/arch-dotfiles/config/zsh/`.
 
 ## `zshrc`
 
