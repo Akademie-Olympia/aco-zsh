@@ -9,6 +9,13 @@
 ::::{grid} 1 2 2 3
 :gutter: 3
 
+:::{grid-item-card} Aufbau & Abhängigkeiten
+:link: design
+:link-type: doc
+
+Warum so gebaut, benötigte Pakete, Bibliotheken und Versionen.
+:::
+
 :::{grid-item-card} Anleitung
 :link: guide
 :link-type: doc
@@ -43,6 +50,7 @@ Kitty, Ghostty und Foot nutzen diese Shell.
 :hidden:
 :maxdepth: 2
 
+design
 guide
 installation
 configuration
