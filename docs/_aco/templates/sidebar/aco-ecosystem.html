@@ -1,0 +1,10 @@
+<div class="aco-eco">
+  <p class="aco-eco-caption">ACO Ökosystem</p>
+  <ul class="aco-eco-list">
+    {%- for slug, name, blurb in aco_projects %}
+    <li class="aco-eco-item{% if slug == aco_current %} current{% endif %}">
+      <a href="https://{{ slug }}.readthedocs.io/en/latest/" title="{{ blurb }}">{{ name }}</a>
+    </li>
+    {%- endfor %}
+  </ul>
+</div>

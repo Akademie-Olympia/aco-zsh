@@ -1,0 +1,72 @@
+/* ACO shared documentation design – layered on top of Furo. No external assets. */
+:root {
+  --aco-radius: 12px;
+  --aco-accent: #1e66f5;
+  --aco-accent-soft: rgba(30, 102, 245, 0.08);
+  --aco-key-bg: #eff1f5;
+  --aco-key-border: #bcc0cc;
+  --aco-key-shadow: #acb0be;
+}
+body[data-theme="dark"] {
+  --aco-accent: #89b4fa;
+  --aco-accent-soft: rgba(137, 180, 250, 0.10);
+  --aco-key-bg: #313244;
+  --aco-key-border: #45475a;
+  --aco-key-shadow: #11111b;
+}
+@media (prefers-color-scheme: dark) {
+  body:not([data-theme="light"]) {
+    --aco-accent: #89b4fa;
+    --aco-accent-soft: rgba(137, 180, 250, 0.10);
+    --aco-key-bg: #313244;
+    --aco-key-border: #45475a;
+    --aco-key-shadow: #11111b;
+  }
+}
+
+/* Typography and rhythm */
+.content { line-height: 1.7; }
+h1 { font-weight: 750; letter-spacing: -0.02em; }
+h2 { margin-top: 2.4rem; padding-bottom: .3rem; border-bottom: 1px solid var(--color-background-border); }
+a { text-underline-offset: 3px; }
+
+/* Code */
+div.highlight, pre { border-radius: var(--aco-radius); }
+code.literal { border-radius: 6px; padding: .1em .4em; }
+
+/* Keyboard keys: {kbd}`Super+Q` */
+kbd, kbd.kbd {
+  display: inline-block; padding: .05em .45em; margin: 0 .1em;
+  font: 600 .82em/1.5 var(--font-stack--monospace);
+  color: var(--color-foreground-primary);
+  background: var(--aco-key-bg); border: 1px solid var(--aco-key-border);
+  border-radius: 6px; box-shadow: 0 2px 0 var(--aco-key-shadow); white-space: nowrap;
+}
+
+/* Tables: reference tables with many keys must stay readable */
+table.docutils { border-radius: var(--aco-radius); overflow: hidden; width: 100%; }
+table.docutils thead th { background: var(--aco-accent-soft); }
+table.docutils tbody tr:nth-child(even) td { background: var(--aco-accent-soft); }
+table.docutils td, table.docutils th { padding: .55rem .8rem; vertical-align: top; }
+table.docutils td:first-child { white-space: nowrap; }
+
+/* Admonitions */
+.admonition { border-radius: var(--aco-radius); border-left-width: 4px; }
+
+/* Cards and hero (sphinx-design) */
+.sd-card { border-radius: var(--aco-radius); transition: transform .12s ease, box-shadow .12s ease; }
+.sd-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0, 0, 0, .12); }
+.sd-card-title { font-weight: 650; }
+.aco-hero { padding: 2.2rem 1.6rem; margin: 0 0 2rem; border-radius: calc(var(--aco-radius) * 1.5);
+  background: linear-gradient(135deg, var(--aco-accent-soft), transparent 70%); border: 1px solid var(--color-background-border); }
+.aco-hero h1 { margin-top: 0; font-size: 2.4rem; }
+.aco-hero p.lead { font-size: 1.15rem; max-width: 46rem; }
+
+/* Sidebar ecosystem navigation */
+.aco-eco { padding: .8rem var(--sidebar-item-spacing-horizontal) 1.2rem; border-top: 1px solid var(--color-sidebar-search-border); margin-top: .8rem; }
+.aco-eco-caption { margin: 0 0 .4rem; font-size: var(--sidebar-caption-font-size); font-weight: 700;
+  text-transform: uppercase; letter-spacing: .05em; color: var(--color-sidebar-caption-text); }
+.aco-eco-list { list-style: none; margin: 0; padding: 0; }
+.aco-eco-item a { display: block; padding: .18rem .5rem; border-radius: 6px; color: var(--color-sidebar-link-text); text-decoration: none; font-size: .9rem; }
+.aco-eco-item a:hover { background: var(--color-sidebar-item-background--hover); }
+.aco-eco-item.current a { font-weight: 700; color: var(--aco-accent); background: var(--aco-accent-soft); }

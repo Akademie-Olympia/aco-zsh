@@ -2,7 +2,7 @@
 
 Oh My Zsh, Autosuggestions, Syntax-Highlighting, FZF, zoxide und Shell-Helfer.
 
-**[Vollständige Dokumentation](https://aco-arch-dotfiles.readthedocs.io/en/latest/shell/)** ·
+**[Vollständige Dokumentation](https://aco-zsh.readthedocs.io/en/latest/)** ·
 [Komponenten](https://aco-arch-dotfiles.readthedocs.io/en/latest/components/#zsh) ·
 [Installation und Updates](https://aco-arch-dotfiles.readthedocs.io/en/latest/arch-package/)
 
