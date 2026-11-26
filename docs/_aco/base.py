@@ -84,19 +84,20 @@ def configure(namespace, *, slug, title, language="en", exclude=(), suppress=(),
             "source_directory": "docs/",
             "navigation_with_keys": True,
             "top_of_page_buttons": ["view", "edit"],
+            # ACO palette (aco-theme, profile "aco"): accent blue, graphite / paper.
             "light_css_variables": {
-                "color-brand-primary": "#1e66f5",
-                "color-brand-content": "#1e66f5",
+                "color-brand-primary": "#2a6fdb",
+                "color-brand-content": "#2a6fdb",
                 "font-stack": "Inter, 'Segoe UI', system-ui, -apple-system, sans-serif",
                 "font-stack--monospace": "'JetBrains Mono', 'Fira Code', ui-monospace, monospace",
             },
             "dark_css_variables": {
-                "color-brand-primary": "#89b4fa",
-                "color-brand-content": "#89b4fa",
-                "color-background-primary": "#1e1e2e",
-                "color-background-secondary": "#181825",
-                "color-background-border": "#313244",
-                "color-foreground-primary": "#cdd6f4",
+                "color-brand-primary": "#5b9cf6",
+                "color-brand-content": "#5b9cf6",
+                "color-background-primary": "#161618",
+                "color-background-secondary": "#1c1c1f",
+                "color-background-border": "#38383e",
+                "color-foreground-primary": "#e6e6ea",
             },
             "footer_icons": [
                 {
