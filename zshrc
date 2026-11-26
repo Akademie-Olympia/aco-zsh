@@ -14,8 +14,8 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 export SUDO_ASKPASS="$HOME/.config/hypr/askpass.sh"
 
-# Theme laden (~/.oh-my-zsh/custom/themes/catppuccin.zsh-theme)
-ZSH_THEME="catppuccin"
+# Prompt: themes/aco.zsh-theme (folgt dem Desktop-Theme über die Terminalfarben)
+ZSH_THEME="aco"
 
 # Schnelle Updates ohne Rückfrage
 zstyle ':omz:update' mode auto
@@ -40,29 +40,26 @@ if [[ -f "$ZSH/oh-my-zsh.sh" ]]; then
     source "$ZSH/oh-my-zsh.sh"
 fi
 
-# Minimaler Prompt (> )
-PROMPT='> '
-
 # ============================================================================
-# CATPPUCCIN MOCHA FARBEN FÜR PLUGINS & TOOLS
+# FARBEN FÜR PLUGINS & TOOLS
 # ============================================================================
-# Dezentes Overlay0 (#6c7086) für Vorschläge während des Tippens
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6c7086"
+# Nur Terminal-Palettenfarben (0-15): sie kommen aus aco-theme und wechseln
+# live mit Hell/Dunkel. 8 = gedämpft, 12 = Akzent, 11 = orange.
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8"
 
-# Catppuccin Mocha Farben für zsh-syntax-highlighting
 typeset -A ZSH_HIGHLIGHT_STYLES
-ZSH_HIGHLIGHT_STYLES[command]='fg=#89b4fa,bold'
-ZSH_HIGHLIGHT_STYLES[alias]='fg=#94e2d5,bold'
-ZSH_HIGHLIGHT_STYLES[builtin]='fg=#cba6f7,bold'
-ZSH_HIGHLIGHT_STYLES[function]='fg=#89b4fa,bold'
-ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#f38ba8,bold'
-ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=#a6e3a1'
-ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=#a6e3a1'
-ZSH_HIGHLIGHT_STYLES[path]='fg=#b4befe,underline'
-ZSH_HIGHLIGHT_STYLES[globbing]='fg=#fab387'
-ZSH_HIGHLIGHT_STYLES[option]='fg=#f9e2af'
+ZSH_HIGHLIGHT_STYLES[command]='fg=12,bold'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=6,bold'
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=5,bold'
+ZSH_HIGHLIGHT_STYLES[function]='fg=12,bold'
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=1,bold'
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=2'
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=2'
+ZSH_HIGHLIGHT_STYLES[path]='underline'
+ZSH_HIGHLIGHT_STYLES[globbing]='fg=11'
+ZSH_HIGHLIGHT_STYLES[option]='fg=3'
 
-# Catppuccin Mocha Farbschema für TUI-Programme wie nmtui
+# Farbschema für TUI-Programme wie nmtui (benannte Terminalfarben)
 export NEWT_COLORS='
 root=white,black
 border=blue,black

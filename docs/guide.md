@@ -1,6 +1,6 @@
 # Shell, CLI Commands & Productivity Aliases
 
-The command-line environment centers on **Zsh** (`~/.config/zsh/zshrc` and `~/.config/zsh/aliases.zsh`) enhanced with **Oh My Zsh**, Catppuccin Mocha syntax highlighting, asynchronous autosuggestions, FZF integration, and custom CLI tools (`aco` / `arch-dot` / `aco-arch-dotfiles` and `wallpaper`).
+The command-line environment centers on **Zsh** (`~/.config/zsh/zshrc` and `~/.config/zsh/aliases.zsh`) enhanced with **Oh My Zsh**, syntax highlighting in the desktop theme colours, asynchronous autosuggestions, FZF integration, and custom CLI tools (`aco` / `arch-dot` / `aco-arch-dotfiles` and `wallpaper`).
 
 ---
 
@@ -9,8 +9,8 @@ The command-line environment centers on **Zsh** (`~/.config/zsh/zshrc` and `~/.c
 - **Default Editor**: `EDITOR="nvim"` and `VISUAL="nvim"`
 - **Graphical Sudo Prompt**: `SUDO_ASKPASS="$HOME/.config/hypr/askpass.sh"` (uses `fuzzel --dmenu --password` in Wayland sessions)
 - **PATH**: Automatically prepends `~/.local/bin` so custom CLI tools (`arch-dot`, `aco-arch-dotfiles`, `wallpaper`) are available everywhere.
-- **Minimal Prompt**: Clean `> ` prompt indicator with zero visual clutter, paired with the custom theme at `~/.oh-my-zsh/custom/themes/catppuccin.zsh-theme`.
-- **TUI Styling (`NEWT_COLORS`)**: Pre-configured Catppuccin Mocha color variables for `nmtui` and other libnewt TUI utilities.
+- **Minimal Prompt**: directory in the accent colour, git branch (with a dot when dirty) and a `❯` that turns red after a failed command (`themes/aco.zsh-theme`). Only terminal palette colours are used, so it follows `aco-theme` live.
+- **TUI Styling (`NEWT_COLORS`)**: named terminal colours for `nmtui` and other libnewt TUI utilities.
 
 ---
 

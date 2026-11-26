@@ -58,5 +58,5 @@ These rules apply to **every** ACO component:
   after a push the central registry builds the signed package ([packaging overview](https://aco-arch-dotfiles.readthedocs.io/en/latest/arch-package/)).
 - **Pacman is the only updater.** No git pull at runtime; `aco` only merges new defaults with your changes (`.pacnew`).
 - **Your copy, not the package's.** `~/.config/<module>` points to `~/.local/share/arch-dotfiles/config/<module>/`; the package stays untouched in `/usr/share/arch-dotfiles/<module>/`.
-- **One palette, one font:** Catppuccin Mocha and JetBrainsMono Nerd Font in every component so nothing falls out of style.
+- **One theme:** colours, fonts and rounding come from `aco-theme` templates in every component, so light/dark, accent and transparency switch everywhere at once.
 - **The core** `aco-arch-dotfiles-core` (the `aco` command, activation, backups, synchronisation) is a dependency of every package.
